@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LM2_HugoMoreno</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <style>
+        body{
+            background-color: lightgray;
+            margin:0 0;
+            padding: 0 0;
+        }
+        .contenedor{
+            width: 90%;
+            max-width: 10000px;
+            display: grid;
+            grid-gap:1em;
+            margin:1em auto;
+            grid-template-rows: repeat(5, auto);
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "header header header"
+                                  "nav nav nav"
+                                  "box1 box2 sidebar1"
+                                  "contenido contenido sidebar2"
+                                  "footer footer footer";
+        }
+        p{
+            margin:0;
+        }
+        .header, .box1, 
+        .box2, .nav,
+        .contenido, .sidebar1,
+        .sidebar2, .footer{
+            border-radius: 0.5em;
+            padding: 1em;
+        }
+        .header{
+            grid-area: header;
+            text-align: center;
+            background-image: url("img/Cappadocia.jpg");
+            color:lightgoldenrodyellow;
+            text-shadow: 0.2em 0 black;
+        }
+        .nav{
+            grid-area: nav;
+            background-color: darkblue;
+            color:white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav ul{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            list-style-type: none;
+        }
+        .nav .elemento{
+            padding: 0.5em 0.5em;
+        }
+        .nav .elemento:hover{
+            background-color: red;
+            color:yellow;
+        }
+        .box1{
+            grid-area: box1;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: white;
+        }
+        .box1 .carta{
+            box-shadow: 0 0.3em 0.3em 0 lightslategray;
+        }
+        .box1 img{
+            width:150px;
+            height: 120px;
+        }
+        .box1 .texto{
+            text-align: center;
+            margin: 0 0 1em 0;
+        }
+        .box2{
+            grid-area: box2;
+            background-color: lightyellow;
+            font-size: 1.2em;
+            text-align: justify;
+        }
+        .box2 b, .sidebar1 b{
+            color:red;
+        }
+        .box2 i{
+            color:blue;
+            font-weight: bold;
+        }
+        .imagen{
+            text-align: center;
+            margin-top:1em;
+        }
+        .imagen img{
+            width: 40%;
+            height: 35%;
+        }
+        .sidebar1{
+            grid-area: sidebar1;
+            background-color: lightblue;
+            text-align: justify;
+            font-size: 1.2em;
+        }
+        .sidebar1 .imagen img{
+            border-radius: 50%;
+        }
+        .contenido{
+            grid-area: contenido;
+            background-color: white;
+        }
+        .contenido form {
+            width: 90%;
+            padding: 0.5em;
+        }
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 1em 2em;
+            margin: 0.5em 0;
+            border: 1px solid lightblue;     
+        }
+        input[type=submit]{
+            width: 105.5%;
+            background-color: aqua;
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 1em 2em;
+            margin: 0.5em 0;
+            border: none;  
+        }
+        input[type=submit]:hover{
+            background-color: green;
+        }
+        .sidebar2{
+            grid-area: sidebar2;
+            background-color: coral;
+        }
+        .sidebar2 .tabla{
+            border-collapse: collapse;
+            margin:2em auto;
+            text-align: center;
+            width: 70%;
+            height: 50%;
+            background-color: lightgrey;
+            box-shadow:0.5em 1em 2em 0 black;
+        }
+        .tabla thead{
+            background-color: black;
+            color:white;
+        }
+        .tabla th,td{
+            padding: 1em;
+            text-align: justify;
+        }
+        .tabla tbody tr:hover{
+            background-color: gold;
+            color:red;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: black;
+            text-align: center;
+            color: white;
+        }
+        @media screen and (max-width: 768px) {
+	        .contenedor {
+		    grid-template-areas: "header header header"
+						 	    "nav nav nav"
+						 	    "box1 box1 box1"
+						 	    "box2 box2 box2"
+							    "sidebar1 sidebar1 sidebar1"
+						 	    "contenido contenido contenido"
+                                "sidebar2 sidebar2 sidebar2"
+                                "footer footer footer";
+	        }   
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <h1> HTML+CSS. FLEXBOX Y GRID </h1>
+        </header>
+        <nav class="nav">
+            <div>
+                <p> EXAMEN 2º Eval LM-DAW1 </p>
+            </div>
+            <ul>
+                <li class="elemento"> Sobre Nosotros </li>
+                <li class="elemento"> Servicios </li>
+                <li class="elemento"> Contacto </li>
+            </ul>
+        </nav>
+        <div class="box1">
+            <div class="carta">
+                <img src="./img/avatar2.png" class="item">
+                <div class="texto">
+                    <p> EGF </p>
+                </div>
+            </div>
+            <div class="carta">
+                <img src="./img/Cappadocia.jpg" class="item">
+                <div class="texto">
+                    <p> CTA </p>
+                </div>
+            </div>
+            <div class="carta">
+                <img src="./img/avatar2.png" class="item">
+                <div class="texto">
+                    <p> AFJ </p>
+                </div>
+            </div>
+            <div class="carta">
+                <img src="./img/Delta-Okavango.jpg" class="item">
+                <div class="texto">
+                    <p> DNA </p>
+                </div>
+            </div>
+            <div class="carta">
+                <img src="./img/avatar2.png" class="item">
+                <div class="texto">
+                    <p> EGF </p>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <p> Este examen corresponde a la segunda
+                evaluación del módulo <b> Lenguajes de Marcas
+                y Sistemas de Gestión de Información </b> del 
+                primer curso del Ciclo Formativo <i>Desarrollo de
+                Aplicaciones Web</i>
+            </p>
+            <div class="imagen">
+                <img src="./img/code-markup.jpg">
+            </div>
+        </div>
+        <aside class="sidebar1">
+            <p> Se pueden tomar todos los apuntes que se
+                estime oportuno pero <b> NO SE PERMITE COPIAR </b>
+                ni <b> TOTAL </b> ni <b> PARCIALMENTE </b>
+                de otro compañero
+            </p>
+            <div class="imagen">
+                <img src="./img/Espia.jpg">
+            </div>
+        </aside>
+        <div class="contenido">
+            <form get="#" method="post">
+                <label><b>Nombre Usuario</b></label>
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Introducir nombre de usuario" name="uname" required>
+                <label><b>Contraseña</b></label>
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Introducir contraseña" name="psw" required>
+                <label><b> Contraseña </b></label>
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Repetir contraseña" name="psw2" required>
+                <input type="submit" name="send" value="Entrar"> 
+            </form>
+            </form>
+        </div>
+        <aside class="sidebar2">
+            <select>
+                <option value="1"> Google </option>
+                <option value="2" selected> Palomeras-Vallecas </option>
+                <option value="3"> Atlético de Madrid</option>
+            </select>
+            <table class="tabla">
+                <thead>
+                    <th> Nombre </th>
+                    <th> Apellidos </th>
+                    <th> Edad </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <i class="fas fa-user"></i> 
+                            Ana 
+                        </td>
+                        <td> García González </td>
+                        <td> 20 </td>
+                    </tr>
+                    <tr>
+                        <td> 
+                            <i class="fas fa-user"></i> 
+                            Luis 
+                        </td>
+                        <td> Fdez Alterio </td>
+                        <td> 21 </td>
+                    </tr>
+                    <tr>
+                        <td> 
+                            <i class="fas fa-user"></i>  
+                            Rosa 
+                        </td>
+                        <td> Gómez Gómez </td>
+                        <td> 19 </td>
+                    </tr>
+                    <tr>
+                        <td> 
+                            <i class="fas fa-user"></i> 
+                            Antonio 
+                        </td>
+                        <td> Durán Gutiérrez </td>
+                        <td> 22 </td>
+                    </tr>
+                </tbody>
+            </table>
+        </aside>
+        <footer class="footer">
+            <h2> 14/03/2023 Hugo Moreno Fernández </h2>
+        </footer>
+    </div>
+</body>
+</html>

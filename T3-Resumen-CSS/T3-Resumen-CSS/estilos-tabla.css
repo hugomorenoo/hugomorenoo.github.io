@@ -1,0 +1,42 @@
+.tabla {
+    border-collapse: collapse;
+    margin: auto; /* Centrar horizontalmente sobre la pçagina */ 
+    margin-top: 2em; 
+    font-size: 1em;
+    font-family: sans-serif;          
+    box-shadow: 0.5em 1em 2em black;
+}
+
+.tabla thead tr {
+    background-color: #F4881C;
+    color: #ffffff;   
+}
+
+.tabla th,
+.tabla td {
+    padding: 0.8em 1em;
+}
+
+.tabla tbody tr:nth-of-type(even) {
+    background-color: lightgray;
+}
+
+.tabla tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.tabla tbody tr:hover {
+    background-color: #1CD3F4;
+    color: #ffffff;
+}
+
+caption {
+    font-weight: bold;
+    color: blue;
+    font-size: 2em;
+    margin-bottom: 0.8em;
+}
+
+caption::first-letter {
+    color: red;
+}
