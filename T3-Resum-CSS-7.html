@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="estilos-tabla.css">
+	<link rel="stylesheet" href="estilos-form.css">
+	<link rel="stylesheet" href="estilos-nav.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<title>T3-Resum-CSS-7. Página web</title>
+	<style>
+		.sidebar .item {
+			width: 80px;
+        	height: 80px;
+		}
+		.widget-1 p, .widget-2 p {
+			text-align: justify;
+			font-family: Tahoma, Verdana, sans-serif;
+
+		}
+		.widget-1 h3, .widget-2 h3 {
+			text-align: center;
+			text-decoration: underline;
+			margin-bottom: 0.3em;
+			color: blue;
+		}
+		.contenedor .footer {
+			background: #000;
+			padding: 1em;
+			border-radius: 0.4em;
+		}
+
+		img {
+            border-radius: 0.4em 0.4em 0 0;      
+        }  
+
+		span {
+			color: black;
+		}
+        
+	</style>
+</head>
+
+<body>
+	<div class="contenedor">
+		<header class="header">
+			<nav>
+				<ul class="navegacion">
+					<li class="logo"><a href="#">DAW1-LM</a></li>
+					<li class="elem"><a href="#">Inicio</a></li>
+					<li class="elem"><a href="#">Sobre Nosotros</a></li>
+					<li class="elem"><a href="#">Servicios</a></li>
+					<li class="elem"><a href="#">Prestaciones</a></li>
+					<li class="elem"><a href="#">Contacto</a></li>
+					<li class="elem button"><i class="fas fa-user"></i><a href="#">Log In</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="contenido">
+
+			<form action="#" method="post">
+				<div class="imgcontainer">
+					<img src="./img/avatar.png" alt="Avatar" class="avatar">
+				</div>
+
+				<div class="container">
+					<label for="uname"><b>Nombre Usuario</b></label>
+					<input type="text" placeholder="Introducir nombre de usuario" name="uname" required>
+
+					<label for="psw"><b>Contraseña</b></label>
+					<input type="password" placeholder="Introducir contraseña" name="psw" required>
+
+					<button type="submit">Entrar</button>
+					<label>
+						<input type="checkbox" checked="checked" name="remember"> Recuérdeme
+					</label>
+				</div>
+
+				<div class="container" style="background-color:#f1f1f1">
+					<button type="button" class="cancelbtn">Cancelar</button>
+					<span>Olvidó la <a href="#">contraseña?</a></span>
+				</div>
+			</form>
+
+			<table class="tabla">
+				<caption>Alumnos</caption>
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Apellidos</th>
+						<th>Edad</th>
+						<th>Género</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Ana</td>
+						<td>García González</td>
+						<td>20</td>
+						<td>Mujer</td>
+					</tr>
+					<tr>
+						<td>Luis</td>
+						<td>Fdez. Alterio</td>
+						<td>21</td>
+						<td>Hombre</td>
+					</tr>
+					</tr>
+					<tr>
+						<td>Rosa</td>
+						<td>Gómez Gómez</td>
+						<td>19</td>
+						<td>Mujer</td>
+					</tr>
+					<tr>
+						<td>Antonio</td>
+						<td>Durán Gutiérrez</td>
+						<td>22</td>
+						<td>Hombre</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+		<aside class="sidebar">
+			<img class="item" src="./img/avatar.png">
+			<img class="item" src="./img/avatar2.png">
+			<img class="item" src="./img/Cappadocia.jpg">
+			<img class="item" src="./img/avatar.png">
+			<img class="item" src="./img/avatar2.png">
+			<img class="item" src="./img/Cappadocia.jpg">
+			<img class="item" src="./img/Delta-Okavango.jpg">
+		</aside>
+		
+		<div class="widget-1">
+			<h3>WIDGET 1</h3>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolores eum laudantium sed voluptatibus.</p>
+		</div>
+		<div class="widget-2">
+			<h3>WIDGET 2</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+		</div>
+		<footer>
+			<p class="santander">PVK</p>
+			<p>@PVK es una marca registrada. Todos los derechos reservados.</p>
+			<div>
+				<a href=""><em class="fab fa-twitter fa-1x"></em></a>
+				<a href=""><em class="fab fa-instagram fa-1x"></em></a>
+				<a href=""><em class="fab fa-facebook fa-1x"></em></a>
+				<a href=""><em class="fab fa-whatsapp fa-1x"></em></a>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
